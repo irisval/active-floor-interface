@@ -1,0 +1,9 @@
+body {
+	background: black;
+	color: black;
+	font-family: Verdana;
+}
+
+#floorCanvas {
+	border: 1px solid;
+}
