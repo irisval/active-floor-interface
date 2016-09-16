@@ -5,35 +5,12 @@ function initCanvas(arr) {
     'use strict';
 
     if (firstTime) {
+        setObjects();
         welcomeScreen();
-
 
         firstTime = false;
     }
 }
-
-function welcomeScreen() {
-    // 
-    'use strict';
-    canvas = document.getElementById('floorCanvas');
-    canvas.width = ledsX;
-    canvas.height = ledsY;
-    context2D = canvas.getContext('2d');
-
-    context2D.fillStyle = 'white';
-    context2D.font = '24px sans-serif';
-
-    context2d.fillText('WELCOME TO ATCS', ((canvas.width / 2) - (context2d.measureText('WELCOME TO ATCS').width / 2)), 50); 
-
-    menu();
-    //menu button 
-
-    // context2D.rect(canvas.width / 2 - (context2D.measureText('Restart').width / 2), canvas.height / 4 + 50, context2D.measureText("Restart").width, 20);
-    // context2D.stroke();
-    // context2D.fillText("Restart", (canvas.width / 2 - (context2D.measureText('Restart').width / 2)), canvas.height / 4 + 63);
-
- }
-
 
 function setObjects(){
     menuBtn = {
@@ -49,16 +26,32 @@ function setObjects(){
 }
 
 
-function menu() {
+function welcomeScreen() {
+    // 
+    'use strict';
+    canvas = document.getElementById('floorCanvas');
+    canvas.width = ledsX;
+    canvas.height = ledsY;
+    context2D = canvas.getContext('2d');
+
+    context2D.fillStyle = 'white';
+    context2D.font = '24px sans-serif';
+
+    context2d.fillText('WELCOME TO ATCS', ((canvas.width / 2) - (context2d.measureText('WELCOME TO ATCS').width / 2)), 50); 
+
     context2D.font = '12px sans-serif';
     context2D.strokeStyle = 'blue';
-    context2D.fillText('Start', startBtn.x, startBtn.y);
-    context2D.strokeRect(startBtn.bx, startBtn.by, startBtn.bw, startBtn.bh);
-}
+    context2D.fillText('Start', menBtn.x, menBtn.y);
+    context2D.strokeRect(menuBtn.bx, menuBtn.by, menuBtn.bw, menuBtn.bh);
+
+
+ }
+
 
 function clear(){
     context2D.clearRect(0,0,canvas.width, canvas.height);
 }
+
 
 function refreshXML() {
     'use strict';
