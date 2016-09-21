@@ -62,7 +62,7 @@ function checkForStart(dataArr){
             if(dataArr[i][j] === "*"){
                 if(i > 16 && (j > 2 && j < 22)){
                     console.log("selected");
-                    window.location = "..\\SlidePuzzle/slidePuzzle.html"
+                    window.location.href = "..SlidePuzzle/slidePuzzle.html"
                 }
             }
         }
